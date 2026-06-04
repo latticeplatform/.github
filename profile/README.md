@@ -1,5 +1,6 @@
-<img src="/profile/lattice_logo.png" width="400" alt="Lattice Logo">
-
+<div align="center">
+    <img src="/profile/lattice_logo.png" width="400" alt="Lattice Logo">
+</div>
 ## Overview
 Lattice is an open-source framework designed for fast and consistent data propagation for your CDC pipelines.
 Built to handle real time data that you can build infrastructure in a matter of minutes.
