@@ -1,4 +1,4 @@
-![Lattice_logo](/profile/lattice_logo.png) {: style="width: 500px; height: auto;" }
+<img src="/profile/lattice_logo.png" width="400" alt="Lattice Logo">
 
 ## Overview
 Lattice is an open-source framework designed for fast and consistent data propagation for your CDC pipelines.
