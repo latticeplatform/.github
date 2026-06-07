@@ -68,21 +68,8 @@ Run MongoDB with the `--replSet` flag and call `rs.initiate()` to initialize the
 
 ---
 
-### 2. Configure Sink Connectors
 
-Sink connectors write data to its destination after it travels through the Kafka pipeline. Clickhouse is our primary tested and fully supported sink, though any JDBC-compatible connector can be used.
-
-#### ClickHouse
-
-Tables in ClickHouse must follow a specific naming convention to map correctly from Kafka topics. For example, to sync the `products` table from PostgreSQL, create a table named `public.products` in ClickHouse. The Kafka topic will be mapped to the matching table name.
-
-#### JDBC Connectors
-
-Other JDBC-compatible databases are supported. Refer to the JDBC documentation for your specific database to confirm setup requirements and replication support.
-
----
-
-### 3. Set Up AWS Credentials
+### 2. Set Up AWS Credentials
 
 Ensure your AWS credentials have the permissions necessary to create ECS instances. You can use an admin account or a role with at minimum the following permissions:
 
@@ -105,7 +92,7 @@ Once permissions are in place:
 
 ---
 
-### 4. Install OpenTofu
+### 3. Install OpenTofu
 
 Follow the [official OpenTofu installation guide](https://opentofu.org/docs/intro/install/). After installation, verify it's working:
 
@@ -115,14 +102,14 @@ tofu --help
 
 ---
 
-### 5. Deploy with `lattice_deploy`
+### 4. Deploy with `lattice_deploy`
 
 Once the AWS CLI is configured and OpenTofu is installed, run `npx lattice-platform-cli setup` to provision your infrastructure.
 To teardown its as simple as `npx lattice-platform-cli teardown`
 
 ---
 
-### 6. Access the Lattice UI
+### 5. Access the Lattice UI
 
 After deployment, locate the UI through the AWS console:
 
@@ -137,6 +124,21 @@ Alternatively, if you have access to your private VPC, navigate to `lattice.loca
 Full UI documentation is available in the [how-to section of our case study](https://latticeplatform.io/docs/lattice-ui/).
 
 ---
+
+### 6. Configure Sink Connectors
+
+Sink connectors write data to its destination after it travels through the Kafka pipeline. Clickhouse is our primary tested and fully supported sink, though any JDBC-compatible connector can be used.
+
+#### ClickHouse
+
+Tables in ClickHouse must follow a specific naming convention to map correctly from Kafka topics. For example, to sync the `products` table from PostgreSQL, create a table named `fulfillment.public.products` in ClickHouse. This follows the naming convention of the topic created in kafka. The Kafka topic will be mapped to the matching table name with what you setup in the GUI in step five .
+
+#### JDBC Connectors
+
+Other JDBC-compatible databases are supported. Refer to the JDBC documentation for your specific database to confirm setup requirements and replication support.
+
+---
+
 
 ## Manual Deployment (for Testing)
 
