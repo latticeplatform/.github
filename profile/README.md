@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/profile/lattice_logo.png" alt="Lattice Logo" width="500" />
+  <img src="lattice_logo.png" alt="Lattice Logo" width="500" />
 </p>
 
 # Lattice
@@ -131,7 +131,8 @@ Sink connectors write data to its destination after it travels through the Kafka
 
 #### ClickHouse
 
-Tables in ClickHouse must follow a specific naming convention to map correctly from Kafka topics. For example, to sync the `products` table from PostgreSQL, create a table named `fulfillment.public.products` in ClickHouse. This follows the naming convention of the topic created in kafka. The Kafka topic will be mapped to the matching table name with what you setup in the GUI in step five .
+Tables in ClickHouse must follow a specific naming convention to map correctly from Kafka topics. For example, to sync the `products` table from PostgreSQL, create a table named `fulfillment.public.products` in ClickHouse. This follows the naming convention of the topic created in kafka. The Kafka topic will be mapped to the matching table name with what you setup in the GUI in step five.
+ensure that the rows in the schema are correctly mapped to the ClickHouse table columns.
 
 #### JDBC Connectors
 
