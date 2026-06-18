@@ -6,7 +6,7 @@
 
 Lattice is an open-source framework designed for fast and consistent data propagation in your CDC pipelines. Built to handle real-time data, you can have infrastructure running in a matter of minutes.
 
-For more information, check out our case study: [Lattice Platform Case Study](https://latticeplatform.io)
+For more information, check out our case study: [Lattice Platform Case Study](https://latticeplatform.io/introduction)
 
 ---
 
@@ -121,7 +121,8 @@ After deployment, locate the UI through the AWS console:
 
 Alternatively, if you have access to your private VPC, navigate to `lattice.local` in your browser.
 
-Full UI documentation is available in the [how-to section of our case study](https://latticeplatform.io/docs/lattice-ui/).
+Full UI documentation is available in the [how-to section of our website](https://latticeplatform.io/using-lattice).
+
 
 ---
 
